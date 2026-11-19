@@ -16,6 +16,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -68,7 +69,8 @@ def main() -> int:
     deliveries = sorted(p.parent for p in root.rglob("manifest.json") if "_private" not in p.parts)
     rows = []
     for d in deliveries:
-        exam = d.parent.name if d.name == "delivery" else d.name
+        coded = [p for p in d.relative_to(root).parts if re.fullmatch(r"de_an_\d+", p)]  # zip lồng: 20 mã/de_an_XX/de_an.zip
+        exam = coded[-1] if coded else (d.parent.name if d.name == "delivery" else d.name)
         out = base / exam
         out.mkdir(parents=True, exist_ok=True)
         t0 = time.time()
