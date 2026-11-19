@@ -1,0 +1,200 @@
+{
+ "note": "ứng viên cần người xem ảnh; KHÔNG phải lỗi đã xác nhận",
+ "images": 250,
+ "candidate_images": 6,
+ "failures": [],
+ "candidates": [
+  {
+   "image": "img_0076",
+   "type": "class_mismatch",
+   "score": 0.9989,
+   "evidence": {
+    "iou": 0.9989,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 1,
+    "class": "car",
+    "xyxy": [
+     0.0,
+     49.9,
+     342.2,
+     272.0
+    ]
+   },
+   "segment": {
+    "id": 9064790,
+    "class": "bus",
+    "area": 52471,
+    "xyxy": [
+     0,
+     50,
+     342,
+     272
+    ]
+   }
+  },
+  {
+   "image": "img_0130",
+   "type": "class_mismatch",
+   "score": 0.9979,
+   "evidence": {
+    "iou": 0.9979,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 3,
+    "class": "elephant",
+    "xyxy": [
+     124.5,
+     35.8,
+     426.0,
+     640.0
+    ]
+   },
+   "segment": {
+    "id": 9865943,
+    "class": "frisbee",
+    "area": 118415,
+    "xyxy": [
+     125,
+     36,
+     426,
+     640
+    ]
+   }
+  },
+  {
+   "image": "img_0174",
+   "type": "class_mismatch",
+   "score": 0.9709,
+   "evidence": {
+    "iou": 0.9709,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 6,
+    "class": "suitcase",
+    "xyxy": [
+     311.7,
+     174.6,
+     336.0,
+     209.9
+    ]
+   },
+   "segment": {
+    "id": 7628221,
+    "class": "handbag",
+    "area": 348,
+    "xyxy": [
+     312,
+     175,
+     336,
+     210
+    ]
+   }
+  },
+  {
+   "image": "img_0015",
+   "type": "bbox_drift",
+   "score": 0.7007,
+   "evidence": {
+    "iou": 0.1619,
+    "cov": 0.2993
+   },
+   "box": {
+    "line": 3,
+    "class": "hot dog",
+    "xyxy": [
+     162.8,
+     100.4,
+     538.0,
+     326.4
+    ]
+   },
+   "segment": {
+    "id": 15247058,
+    "class": "hot dog",
+    "area": 19219,
+    "xyxy": [
+     312,
+     49,
+     640,
+     179
+    ]
+   }
+  },
+  {
+   "image": "img_0050",
+   "type": "bbox_drift",
+   "score": 0.3403,
+   "evidence": {
+    "iou": 0.1138,
+    "cov": 0.6597
+   },
+   "box": {
+    "line": 3,
+    "class": "broccoli",
+    "xyxy": [
+     456.5,
+     311.7,
+     545.7,
+     372.7
+    ]
+   },
+   "segment": {
+    "id": 6262721,
+    "class": "broccoli",
+    "area": 4226,
+    "xyxy": [
+     239,
+     312,
+     545,
+     466
+    ]
+   }
+  },
+  {
+   "image": "img_0014",
+   "type": "bbox_drift",
+   "score": 0.0758,
+   "evidence": {
+    "iou": 0.7095,
+    "cov": 0.9242
+   },
+   "box": {
+    "line": 1,
+    "class": "motorcycle",
+    "xyxy": [
+     152.3,
+     93.1,
+     378.8,
+     246.8
+    ]
+   },
+   "segment": {
+    "id": 12005807,
+    "class": "motorcycle",
+    "area": 16076,
+    "xyxy": [
+     137,
+     110,
+     364,
+     264
+    ]
+   }
+  }
+ ]
+}
