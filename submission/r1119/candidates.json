@@ -1,0 +1,219 @@
+{
+ "note": "ứng viên cần người xem ảnh; KHÔNG phải lỗi đã xác nhận",
+ "images": 250,
+ "candidate_images": 7,
+ "failures": [],
+ "candidates": [
+  {
+   "image": "000000001993",
+   "type": "class_mismatch",
+   "score": 0.9928,
+   "evidence": {
+    "iou": 0.9928,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 3,
+    "class": "chair",
+    "xyxy": [
+     0.0,
+     298.7,
+     35.2,
+     408.0
+    ]
+   },
+   "segment": {
+    "id": 592651,
+    "class": "couch",
+    "area": 2281,
+    "xyxy": [
+     0,
+     299,
+     35,
+     408
+    ]
+   }
+  },
+  {
+   "image": "000000018833",
+   "type": "class_mismatch",
+   "score": 0.9899,
+   "evidence": {
+    "iou": 0.9899,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 1,
+    "class": "car",
+    "xyxy": [
+     186.7,
+     46.9,
+     507.4,
+     370.5
+    ]
+   },
+   "segment": {
+    "id": 6976126,
+    "class": "cat",
+    "area": 42418,
+    "xyxy": [
+     187,
+     47,
+     507,
+     368
+    ]
+   }
+  },
+  {
+   "image": "000000012670",
+   "type": "class_mismatch",
+   "score": 0.9732,
+   "evidence": {
+    "iou": 0.9732,
+    "cov": 1.0,
+    "hypotheses": [
+     "class_swap",
+     "category_swap"
+    ]
+   },
+   "box": {
+    "line": 18,
+    "class": "suitcase",
+    "xyxy": [
+     549.8,
+     64.6,
+     578.9,
+     116.6
+    ]
+   },
+   "segment": {
+    "id": 2759963,
+    "class": "backpack",
+    "area": 574,
+    "xyxy": [
+     550,
+     65,
+     579,
+     117
+    ]
+   }
+  },
+  {
+   "image": "000000022192",
+   "type": "bbox_drift",
+   "score": 0.277,
+   "evidence": {
+    "iou": 0.4839,
+    "cov": 0.723
+   },
+   "box": {
+    "line": 1,
+    "class": "dog",
+    "xyxy": [
+     100.7,
+     154.2,
+     254.1,
+     426.0
+    ]
+   },
+   "segment": {
+    "id": 2172724,
+    "class": "dog",
+    "area": 22744,
+    "xyxy": [
+     72,
+     121,
+     216,
+     376
+    ]
+   }
+  },
+  {
+   "image": "000000007977",
+   "type": "bbox_drift",
+   "score": 0.1974,
+   "evidence": {
+    "iou": 0.6411,
+    "cov": 0.8026
+   },
+   "box": {
+    "line": 1,
+    "class": "person",
+    "xyxy": [
+     102.1,
+     202.4,
+     260.5,
+     478.1
+    ]
+   },
+   "segment": {
+    "id": 5855070,
+    "class": "person",
+    "area": 12934,
+    "xyxy": [
+     104,
+     145,
+     263,
+     421
+    ]
+   }
+  },
+  {
+   "image": "000000018380",
+   "type": "bbox_drift",
+   "score": 0.0497,
+   "evidence": {
+    "iou": 0.2743,
+    "cov": 0.9503
+   },
+   "box": {
+    "line": 18,
+    "class": "person",
+    "xyxy": [
+     487.3,
+     133.1,
+     640.0,
+     426.0
+    ]
+   },
+   "segment": {
+    "id": 4025253,
+    "class": "person",
+    "area": 31566,
+    "xyxy": [
+     226,
+     32,
+     640,
+     426
+    ]
+   }
+  },
+  {
+   "image": "000000006213",
+   "type": "missing_box",
+   "score": 0.0063,
+   "evidence": {
+    "area_ratio": 0.0063
+   },
+   "segment": {
+    "id": 9155032,
+    "class": "sink",
+    "area": 1717,
+    "xyxy": [
+     407,
+     253,
+     497,
+     287
+    ]
+   }
+  }
+ ]
+}

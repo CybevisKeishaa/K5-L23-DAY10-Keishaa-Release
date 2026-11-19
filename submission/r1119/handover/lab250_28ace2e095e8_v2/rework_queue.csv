@@ -1,0 +1,8 @@
+image,type,annotator,reviewer,action
+000000000802,invalid_class,A02,Q01,class_id ngoài 0-79: gán lại lớp
+000000003845,invalid_class,A03,Q01,class_id ngoài 0-79: gán lại lớp
+000000013177,bbox_out_of_bounds,A02,Q01,box tràn mép ảnh: kẻ lại box
+000000015597,bbox_out_of_bounds,A01,Q01,box tràn mép ảnh: kẻ lại box
+000000015956,duplicate_box,A01,Q01,box bị lặp: xoá box thừa
+000000022892,missing_image,A05,Q03,thiếu file ảnh: lấy lại ảnh gốc rồi gán lại
+000000024021,missing_image,A02,Q02,thiếu file ảnh: lấy lại ảnh gốc rồi gán lại
