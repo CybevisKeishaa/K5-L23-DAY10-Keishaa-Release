@@ -95,7 +95,15 @@ def main() -> int:
             b = f"box dòng {c['box']['line']} = <b>{html.escape(c['box']['class'])}</b>" if "box" in c else "không có box"
             s = f"segment = <b>{html.escape(c['segment']['class'])}</b> ({c['segment']['area']} px)" if "segment" in c else ""
             lines.append(f"<li><code>{c['type']}</code> score={c['score']} · {b} · {s} · {html.escape(json.dumps(c['evidence'], ensure_ascii=False))}</li>")
-        opts = "".join(f'<option value="{t}">{t}</option>' for t in SEMANTIC)
+        c0 = by_img[name][0]
+        desc = {"class_swap": "detection (box) ghi sai lớp", "category_swap": "panoptic (segment) ghi sai lớp",
+                "bbox_drift": "box lệch khỏi vật", "missing_box": "có vật nhưng thiếu box",
+                "instance_merge": "một segment gộp nhiều vật"}
+        if "box" in c0 and "segment" in c0 and c0["box"]["class"] != c0["segment"]["class"]:
+            b, s = html.escape(c0["box"]["class"]), html.escape(c0["segment"]["class"])
+            desc["class_swap"] = f"vật thật là {s} → box detection ghi sai {b}"
+            desc["category_swap"] = f"vật thật là {b} → segment panoptic ghi sai {s}"
+        opts = "".join(f'<option value="{t}"{" selected" if t == c0["type"] else ""}>{t} — {desc[t]}</option>' for t in SEMANTIC)
         cards.append(f"""<section data-img="{name}"><h3>{k}. {name}</h3>
 <img src="img/{name}.png" loading="lazy"><ul>{''.join(lines)}</ul>
 <label>Loại <select class="t"><option value=""></option>{opts}</select></label>

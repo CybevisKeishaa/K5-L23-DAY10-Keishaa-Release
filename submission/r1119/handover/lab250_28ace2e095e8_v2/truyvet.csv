@@ -56,7 +56,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000005992,scene_461,train,J03,A02,Q03,v1.2
 000000006012,scene_461,train,J03,A02,Q03,v1.2
 000000006040,scene_461,train,J03,A02,Q03,v1.2
-000000006213,scene_461,train,J03,A02,Q03,v1.2
 000000006460,scene_902,train,J03,A02,Q03,v1.2
 000000006471,scene_902,train,J03,A02,Q03,v1.2
 000000006614,scene_902,train,J03,A02,Q03,v1.2
@@ -78,7 +77,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000007816,scene_742,val,J04,A04,Q02,v1.2
 000000007818,scene_742,val,J04,A04,Q02,v1.2
 000000007888,scene_292,train,J04,A04,Q02,v1.2
-000000007977,scene_292,train,J04,A04,Q02,v1.2
 000000007991,scene_292,train,J04,A04,Q02,v1.2
 000000008021,scene_292,train,J04,A04,Q02,v1.2
 000000008211,scene_292,train,J04,A04,Q02,v1.2
@@ -120,7 +118,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000012576,scene_546,val,J05,A05,Q02,v1.3
 000000012639,scene_546,val,J05,A05,Q02,v1.3
 000000012667,scene_546,val,J05,A05,Q02,v1.3
-000000012670,scene_546,val,J05,A05,Q02,v1.3
 000000012748,scene_546,val,J05,A05,Q02,v1.3
 000000013004,scene_737,train,J06,A02,Q01,v1.3
 000000013201,scene_737,train,J06,A02,Q01,v1.3
@@ -175,13 +172,11 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000017959,scene_127,train,J08,A04,Q01,v1.3
 000000018150,scene_127,train,J08,A04,Q01,v1.3
 000000018193,scene_679,train,J08,A04,Q01,v1.3
-000000018380,scene_679,train,J08,A04,Q01,v1.3
 000000018491,scene_679,train,J08,A04,Q01,v1.3
 000000018519,scene_679,train,J08,A04,Q01,v1.3
 000000018575,scene_679,train,J08,A04,Q01,v1.3
 000000018737,scene_908,val,J08,A04,Q01,v1.3
 000000018770,scene_908,val,J08,A04,Q01,v1.3
-000000018833,scene_908,val,J08,A04,Q01,v1.3
 000000018837,scene_908,val,J08,A04,Q01,v1.3
 000000019042,scene_908,val,J08,A04,Q01,v1.3
 000000019109,scene_377,train,J08,A04,Q01,v1.3
@@ -205,7 +200,6 @@ image,scene_id,split,job_id,annotator,reviewer,guideline
 000000021839,scene_305,val,J09,A05,Q03,v1.3
 000000021879,scene_305,val,J09,A05,Q03,v1.3
 000000021903,scene_701,train,J09,A05,Q03,v1.3
-000000022192,scene_701,train,J09,A05,Q03,v1.3
 000000022371,scene_701,train,J09,A05,Q03,v1.3
 000000022396,scene_701,train,J09,A05,Q03,v1.3
 000000022479,scene_701,train,J09,A05,Q03,v1.3

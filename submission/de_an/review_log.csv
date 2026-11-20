@@ -1,1 +1,7 @@
 image,type,verdict,note
+img_0076,class_swap,confirmed,"Trong ảnh là xe buýt trường học màu vàng (panoptic ghi bus đúng), nhưng detection ghi sai thành car"
+img_0130,category_swap,confirmed,"Trong ảnh là con voi, detection ghi elephant đúng, nhưng segment panoptic lại ghi là frisbee"
+img_0174,class_swap,confirmed,"Phóng to: người áo jean xách túi nhỏ xanh nhạt bên hông, là handbag (panoptic đúng); detection ghi sai thành suitcase"
+img_0015,bbox_drift,confirmed,"Khung detection hot dog ở giữa bị lệch và cắt cụt hai đầu bánh"
+img_0050,bbox_drift,rejected,"Khung đỏ đã khoanh đúng miếng bông cải nhỏ bên phải, chỉ hơi dư viền do vật thể nhỏ và lẫn trong sợi mì"
+img_0014,bbox_drift,rejected,"segment đúng khớp với xe, chỉ không được tròn trịa"

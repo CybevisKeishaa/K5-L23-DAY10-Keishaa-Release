@@ -1,1 +1,8 @@
 image,type,verdict,note
+000000001993,category_swap,confirmed,"Vật là ghế (chair), detection đúng nhưng segment panoptic lại ghi là couch (Keishaa xem)"
+000000018833,class_swap,confirmed,"Vật là con mèo, panoptic ghi cat đúng nhưng box detection ghi sai thành car (Keishaa xem)"
+000000012670,class_swap,confirmed,"Vật là ba lô (backpack), panoptic đúng nhưng box detection ghi sai thành suitcase (Keishaa xem)"
+000000022192,bbox_drift,confirmed,"Lệch box, box không bao hết được con dog (Keishaa xem)"
+000000007977,bbox_drift,confirmed,"Bbox lệch so với person, không ôm đúng người (Keishaa xem)"
+000000018380,bbox_drift,confirmed,"Box detection lệch, không khớp với người được segment panoptic (Keishaa xem)"
+000000006213,missing_box,confirmed,"Có segment sink nhưng detection không có box nào cho vật (Keishaa xem)"

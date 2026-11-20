@@ -1,12 +1,36 @@
 {
  "errors": [
   {
+   "type": "bbox_drift",
+   "target": "000000007977"
+  },
+  {
+   "type": "bbox_drift",
+   "target": "000000018380"
+  },
+  {
+   "type": "bbox_drift",
+   "target": "000000022192"
+  },
+  {
    "type": "bbox_out_of_bounds",
    "target": "000000013177"
   },
   {
    "type": "bbox_out_of_bounds",
    "target": "000000015597"
+  },
+  {
+   "type": "category_swap",
+   "target": "000000001993"
+  },
+  {
+   "type": "class_swap",
+   "target": "000000012670"
+  },
+  {
+   "type": "class_swap",
+   "target": "000000018833"
   },
   {
    "type": "duplicate_box",
@@ -27,6 +51,10 @@
   {
    "type": "invalid_class",
    "target": "000000003845"
+  },
+  {
+   "type": "missing_box",
+   "target": "000000006213"
   },
   {
    "type": "missing_image",

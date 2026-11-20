@@ -1,4 +1,4 @@
-# Báo cáo nhóm <<XX>>
+# Báo cáo nhóm Keishaa
 
 > Làm một mình (lớp hết slot nhóm, đã xin phép giảng viên). Seed luyện tập: **1119**. Mọi số dưới đây lấy từ lần chạy thật trên máy (`runs/`, không commit); `score_findings.py` chỉ in F1 làm tròn 1 chữ số.
 
@@ -17,12 +17,12 @@
 
 | Lô | Ứng viên | F1 gán nhãn nếu nộp hết ứng viên |
 |---|---:|---:|
-| r1119 | 7 (trên 7 ảnh) | chờ review |
+| r1119 | 7 (trên 7 ảnh) | sau review: 7 confirmed, 0 rejected (xem dưới) |
 | seed 11 / 22 / 33 / 44 / 55 | 5 / 7 / 8 / 6 / 10 | ≈ 0.6 / 0.5 / 0.8 / 0.8 / 0.8 |
 | 3 lô kiểu đề ẩn | 10 / 6 / 8 | ≈ 0.7 / 0.5 / 0.7 |
 | lô sạch | **0** | — |
 
-- F1 seed 1119 sau review: <<điền sau khi chạy `python scripts/score_findings.py --run runs/r1119` với errors.json đã chốt>>.
+- F1 seed 1119 sau review (`score_findings.py`, 20 lỗi nộp): tổng ≈ 0.9 · luật ≈ 1.0 · gán nhãn ≈ 0.9 · truy vết tier_a/tier_b/notify ≈ 1.0. Review: 2 `class_swap`, 1 `category_swap`, 3 `bbox_drift`, 1 `missing_box`.
 - Hàng đợi review seed 1119: **7 ảnh** (3 lệch lớp, 3 box lệch, 1 thiếu box).
 
 **Cách ghép và chọn ngưỡng (không dùng `_private`):**
@@ -38,7 +38,7 @@
 F1 là trung bình điều hoà của precision và recall trên cặp `(type, target)`; báo thừa bị trừ như bỏ sót. Mỗi ứng viên chưa xem mà nộp luôn thì hoặc đúng, hoặc thành FP. Ví dụ đo được: nộp hết ứng viên ở seed 22 cho F1 gán nhãn chỉ ≈ 0.5 — một phần vì mỗi ca lệch lớp chỉ có **một** trong hai giả thuyết (`class_swap` / `category_swap`) đúng, đoán sai loại thì vừa FP vừa FN. Với lô thật, COCO còn có lệch tự nhiên (vật bị che, crowd) nên ghép thô sinh nhiều ứng viên hơn số lỗi; nộp hết thì precision tụt và kéo F1 xuống, nên phải xem ảnh để `rejected` ca tự nhiên và chọn đúng loại.
 
 ## 3. Quyết định và lineage
-QC v1 = **13/250 = 5,2%** (lỗi luật; cộng thêm lỗi gán nhãn sau khi review) > ngưỡng 2% ⇒ **HOLD** (đã ghi `decision HOLD` cho `lab250_28ace2e095e8`). `lineage.py impact` trả `R-021: affected=True action=review_or_retrain`: R-021 đã train trên v1 có lỗi; đổi dataset không tự sửa model đã học, nên phải đánh giá lại R-021 trên dữ liệu sạch hoặc train lại trên v2. v2 ghi `release lab250_28ace2e095e8_v2 --parent lab250_28ace2e095e8`.
+QC v1 = **20/250 = 8,0%** (13 lỗi luật + 7 lỗi gán nhãn đã xác nhận) > ngưỡng 2% ⇒ **HOLD** (đã ghi `decision HOLD` cho `lab250_28ace2e095e8`). `lineage.py impact` trả `R-021: affected=True action=review_or_retrain`: R-021 đã train trên v1 có lỗi; đổi dataset không tự sửa model đã học, nên phải đánh giá lại R-021 trên dữ liệu sạch hoặc train lại trên v2. v2 ghi `release lab250_28ace2e095e8_v2 --parent lab250_28ace2e095e8`: 237 ảnh, 1584 nhãn, 13 ảnh vào `rework_queue.csv`; `check_handover.py` 17 PASS.
 
 ## 4. Hash chứng minh gì, không chứng minh gì?
 sha256 chứng minh **byte** của file không đổi từ lúc lập manifest (v1 không bị ghi đè, zip v2 tái lập đúng mã `.sha256`), và phát hiện file bị thay (ca `wrong_hash` 000000025096: hash trong manifest là của ảnh khác; mở ảnh thấy giải mã được, đúng kích thước nên chỉ manifest sai, v2 ghi hash mới). Hash **không** chứng minh nhãn đúng (box lệch hay sai lớp vẫn có hash hợp lệ), không chứng minh ảnh đúng nội dung/đúng cảnh, không cho biết ai gán và gán theo guideline nào.
